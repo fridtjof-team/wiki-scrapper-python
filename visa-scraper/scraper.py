@@ -5,7 +5,11 @@ class CountryDataSpider(scrapy.Spider):
     start_urls = ['https://en.wikipedia.org/wiki/Template:Visa_requirements']
     
     def parse(self, response):
-        for country in response.css('div/ul/li'):
+        SET_SELECTOR = '//*[contains(@class, \"navbox-list\")]/div/ul//li'
+        for country in response.xpath(SET_SELECTOR):
+            NAME_SELECTOR = 'a ::text'
+            WIKI_LINK_SELECTOR = 'a ::attr(href)'
             yield {
-                'text': country.css('a::text').extract_first(),
+                'name': country.css(NAME_SELECTOR).extract_first(),
+                'wiki_link' : country.css(WIKI_LINK_SELECTOR).extract_first(),
             }
