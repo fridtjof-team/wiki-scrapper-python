@@ -1,6 +1,11 @@
 import scrapy
 
-
-class BrickSetSpider(scrapy.Spider):
-    name = "brickset_spider"
-    start_urls = ['https://en.wikipedia.org/wiki/Category:Visa_requirements_by_nationality']
+class CountryDataSpider(scrapy.Spider):
+    name = "country_data_spider"
+    start_urls = ['https://en.wikipedia.org/wiki/Template:Visa_requirements']
+    
+    def parse(self, response):
+        for country in response.css('div/ul/li'):
+            yield {
+                'text': country.css('a::text').extract_first(),
+            }
