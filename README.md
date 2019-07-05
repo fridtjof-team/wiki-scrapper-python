@@ -27,10 +27,10 @@ $ scrapy crawl wikipedia_country
 this will generate a json file in the current directory.
 
 ## Built with
-[Python 3](https://www.python.org/) - Programming language.
-[Scrapy](https://scrapy.org/) - Framework for extracting the data and saving it.
-[Pandas](https://pandas.pydata.org/) - Parsing the CSV
+* [Python 3](https://www.python.org/) - Programming language.
+* [Scrapy](https://scrapy.org/) - Framework for extracting the data and saving it.
+* [Pandas](https://pandas.pydata.org/) - Parsing the CSV
 
 ## Authors
-* **Ayush Gupta** - *Initial work* [MrAyush](https://github.com/MrAyush)
+ * **Ayush Gupta** - *Initial work* [MrAyush](https://github.com/MrAyush)
 See also the list of [contributors](https://github.com/fridtjof-team/wiki-scrapper-python/graphs/contributors)
