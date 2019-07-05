@@ -33,4 +33,5 @@ this will generate a json file in the current directory.
 
 ## Authors
  * **Ayush Gupta** - *Initial work* [MrAyush](https://github.com/MrAyush)
+
 See also the list of [contributors](https://github.com/fridtjof-team/wiki-scrapper-python/graphs/contributors)
